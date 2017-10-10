@@ -1,0 +1,40 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+  padding-top: 10px;
+}
+
+.thumbnail img {
+	max-height: 250px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+.form-spacing-top {
+  margin-top: 20px;
+}
+
+.panel-body p {
+  font-size: 20px;
+}
