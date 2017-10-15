@@ -34,6 +34,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> {{Auth::check() ? Auth::user()->name : "User Management"}}<span class="caret"></span></a>
           @if(Auth::check())
             <ul class="dropdown-menu">
+              <li><a href="{{route('user.profile')}}">User Profile</a></li>
               <li><a href="{{route('products.index')}}">Products</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="{{route('logout')}}">Logout</a></li>

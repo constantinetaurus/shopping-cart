@@ -18,6 +18,7 @@
 			{{Form::submit('Login', ['class' => 'btn btn-success btn-block form-spacing-top'])}}
 
 			{!!Form::close()!!}
+			<p class="lead form-spacing-top text-muted text-center">Don't have an account? <a href="{{route('register')}}">Register</a></p>
 		</div>
 	</div>
 @endsection

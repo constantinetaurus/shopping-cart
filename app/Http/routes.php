@@ -10,13 +10,17 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+//User
+Route::get('/user/profile', ['as' => 'user.profile','uses' => 'UserController@getProfile', 'middleware' => 'auth']);
+
 //Checkout
-Route::get('/checkout', ['as' => 'cart.checkout','uses' => 'CartController@getCheckout']);
-Route::post('/checkout', ['as' => 'cart.checkout','uses' => 'CartController@postCheckout']);
+Route::get('/checkout', ['as' => 'cart.checkout','uses' => 'CartController@getCheckout', 'middleware' => 'auth']);
+Route::post('/checkout', ['as' => 'cart.checkout','uses' => 'CartController@postCheckout', 'middleware' => 'auth']);
 
 //Shopping Cart
 Route::get('/shopping-cart/add-to-cart/{id}', ['as' => 'cart.addToCart','uses' => 'CartController@getAddToCart']);
-
+Route::get('/shopping-cart/reduce/{id}', ['as' => 'cart.reduceByOne','uses' => 'CartController@getReduceByOne']);
+Route::get('/shopping-cart/removeAll/{id}', ['as' => 'cart.removeAll','uses' => 'CartController@getRemoveAll']);
 Route::get('/shopping-cart', ['as' => 'cart.shoppingCart','uses' => 'CartController@getShoppingCart']);
 
 //Authentication
